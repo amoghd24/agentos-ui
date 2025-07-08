@@ -9,6 +9,10 @@ const api: AxiosInstance = axios.create({
   }
 });
 
+// Connection error debouncing mechanism
+let lastConnectionErrorTime = 0;
+const CONNECTION_ERROR_DEBOUNCE_MS = 3000; // Only show connection errors once every 3 seconds
+
 // Add request interceptor for auth tokens
 api.interceptors.request.use(
   (config) => {
@@ -110,7 +114,14 @@ api.interceptors.response.use(
       }
     } else if (error.request) {
       // Request was made but no response received
-      toast.error('No response from server. Please check your connection.');
+      // Implement debounce for connection errors to prevent multiple toasts
+      const now = Date.now();
+      if (now - lastConnectionErrorTime > CONNECTION_ERROR_DEBOUNCE_MS) {
+        toast.error('No response from server. Please check your connection.', {
+          id: 'connection-error', // Use the same ID for connection errors
+        });
+        lastConnectionErrorTime = now;
+      }
     } else {
       // Something else happened in setting up the request
       toast.error('Error sending request. Please try again.');
