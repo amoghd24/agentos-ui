@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/sidebar"
 
 // Logo import
-import amplitudeLogo from "@/assets/amplitudeLogo.webp"
+import amplitudeLogo from "@/assets/amlitudeLogo.png"
 
 // This is sample data.
 const data = {
