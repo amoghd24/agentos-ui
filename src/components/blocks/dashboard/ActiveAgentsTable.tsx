@@ -67,16 +67,6 @@ export function ActiveAgentsTable({
       return <ErrorDisplay message={`Error loading agents: ${error}`} />;
     }
 
-    if (prompts.length === 0) {
-      return (
-        <PlaceholderState
-          icon={Play}
-          title="No agents found"
-          description="Create your first agent to see it listed here."
-        />
-      );
-    }
-
     return (
       <Table>
         <TableHeader>

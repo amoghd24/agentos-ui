@@ -23,10 +23,14 @@ export const appRoutes: RouteObject[] = [
   // createRouteWithMeta(ROUTES.AI_PROVIDERS, <AIProvidersPage />),
   //@ts-ignore
   createRouteWithMeta(ROUTES.AGENTS, <AgentsPage />),
-  // createRouteWithMeta(ROUTES.PLAYGROUND, <PlaygroundPage />),
-  // createRouteWithMeta(ROUTES.PLAYGROUND_DETAIL(':id'), <PlaygroundPage />),
-  // createRouteWithMeta(ROUTES.PROMPTS_EDIT(':promptId'), <PlaygroundPage />),
-  // createRouteWithMeta(ROUTES.PROMPTS(':id'), <AgentChatPage />),
+  //@ts-ignore
+  createRouteWithMeta(ROUTES.PLAYGROUND, <PlaygroundPage />),
+  //@ts-ignore
+  createRouteWithMeta(ROUTES.PLAYGROUND_DETAIL(':id'), <PlaygroundPage />),
+  //@ts-ignore
+  createRouteWithMeta(ROUTES.PROMPTS_EDIT(':promptId'), <PlaygroundPage />),
+  //@ts-ignore
+  createRouteWithMeta(ROUTES.PROMPTS(':id'), <AgentChatPage />),
   // createRouteWithMeta(ROUTES.CONVERSATIONS, <ConversationsPage />, {
   //   children: [
   //     createRouteWithMeta("", <ConversationPlaceholder />, { index: true }),

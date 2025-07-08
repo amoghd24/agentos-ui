@@ -22,6 +22,9 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar"
 
+// Logo import
+import amplitudeLogo from "@/assets/amplitudeLogo.webp"
+
 // This is sample data.
 const data = {
   user: {
@@ -83,11 +86,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link to="/">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-transparent">
+                  <img src={amplitudeLogo} alt="Amplitude Logo" className="size-8" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">Agentos UI</span>
+                  <span className="truncate font-semibold">Agentos</span>
                   <span className="truncate text-xs">Platform</span>
                 </div>
               </Link>
