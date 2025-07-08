@@ -18,17 +18,19 @@ import AgentChatPage from "@/pages/agent-chat";
  */
 export const appRoutes: RouteObject[] = [
   // Dashboard routes - HOME and DASHBOARD point to the same component
+  //@ts-ignore
   ...flattenRoutes(createRouteWithMeta([ROUTES.HOME, ROUTES.DASHBOARD], <DashboardPage />)),
-  createRouteWithMeta(ROUTES.AI_PROVIDERS, <AIProvidersPage />),
+  // createRouteWithMeta(ROUTES.AI_PROVIDERS, <AIProvidersPage />),
+  //@ts-ignore
   createRouteWithMeta(ROUTES.AGENTS, <AgentsPage />),
-  createRouteWithMeta(ROUTES.PLAYGROUND, <PlaygroundPage />),
-  createRouteWithMeta(ROUTES.PLAYGROUND_DETAIL(':id'), <PlaygroundPage />),
-  createRouteWithMeta(ROUTES.PROMPTS_EDIT(':promptId'), <PlaygroundPage />),
-  createRouteWithMeta(ROUTES.PROMPTS(':id'), <AgentChatPage />),
-  createRouteWithMeta(ROUTES.CONVERSATIONS, <ConversationsPage />, {
-    children: [
-      createRouteWithMeta("", <ConversationPlaceholder />, { index: true }),
-      createRouteWithMeta(":id", <ConversationDetailsPage />)
-    ]
-  }),
+  // createRouteWithMeta(ROUTES.PLAYGROUND, <PlaygroundPage />),
+  // createRouteWithMeta(ROUTES.PLAYGROUND_DETAIL(':id'), <PlaygroundPage />),
+  // createRouteWithMeta(ROUTES.PROMPTS_EDIT(':promptId'), <PlaygroundPage />),
+  // createRouteWithMeta(ROUTES.PROMPTS(':id'), <AgentChatPage />),
+  // createRouteWithMeta(ROUTES.CONVERSATIONS, <ConversationsPage />, {
+  //   children: [
+  //     createRouteWithMeta("", <ConversationPlaceholder />, { index: true }),
+  //     createRouteWithMeta(":id", <ConversationDetailsPage />)
+  //   ]
+  // }),
 ]; 

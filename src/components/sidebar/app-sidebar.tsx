@@ -43,35 +43,35 @@ const data = {
       isActive: true,
     },
     {
-      title: "Conversations",
-      url: "/conversations",
-      icon: MessageSquare,
-      isActive: true,
-    },
-    {
       title: "Tools",
       url: "/tools",
       icon: Wrench,
       isActive: true,
     },
-    {
-      title: "Integrations",
-      url: "/integrations",
-      icon: Settings2,
-      isActive: true,
-    },
-    {
-      title: "Evals",
-      url: "/evals",
-      icon: Settings2,
-      isActive: true,
-    },
-    {
-      title: "AI Providers",
-      url: "/ai-providers",
-      icon: BotMessageSquare,
-      isActive: true,
-    },
+    // {
+    //   title: "Conversations",
+    //   url: "/conversations",
+    //   icon: MessageSquare,
+    //   isActive: true,
+    // },
+    // {
+    //   title: "Integrations",
+    //   url: "/integrations",
+    //   icon: Settings2,
+    //   isActive: true,
+    // },
+    // {
+    //   title: "Evals",
+    //   url: "/evals",
+    //   icon: Settings2,
+    //   isActive: true,
+    // },
+    // {
+    //   title: "AI Providers",
+    //   url: "/ai-providers",
+    //   icon: BotMessageSquare,
+    //   isActive: true,
+    // },
   ],
 }
 
