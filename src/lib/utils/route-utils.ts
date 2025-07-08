@@ -16,6 +16,7 @@ export const ROUTES = {
   PLAYGROUND_DETAIL: (id: string) => `/playground/${id}`,
   PROMPTS_EDIT: (promptId: string) => `/prompts/edit/${promptId}`,
   PROMPTS: (id: string) => `/prompts/${id}`,
+  AGENT_CHAT: '/agent-chat', // Direct route for MCP Agent Chat
   CONVERSATIONS: '/conversations',
   CONVERSATION_DETAIL: (id: string) => `/conversations/${id}`,
   CONVERSATION_NEW: '/conversations/new',
@@ -33,6 +34,7 @@ export const ROUTE_DISPLAY_NAMES: Record<string, string> = {
   [ROUTES.PLAYGROUND]: "Create Prompt",
   [ROUTES.CONVERSATIONS]: "Conversations",
   [ROUTES.LOGIN]: "Login",
+  [ROUTES.AGENT_CHAT]: "MCP Agent", // Display name for MCP Agent Chat
   // Dynamic routes - these are used as fallbacks for routes with parameters
   "playground/:id": "Edit Prompt",
   "prompts/edit/:promptId": "Edit Prompt",

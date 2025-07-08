@@ -31,6 +31,9 @@ export const appRoutes: RouteObject[] = [
   createRouteWithMeta(ROUTES.PROMPTS_EDIT(':promptId'), <PlaygroundPage />),
   //@ts-ignore
   createRouteWithMeta(ROUTES.PROMPTS(':id'), <AgentChatPage />),
+  // Direct route to MCP Agent Chat - no parameters required
+  //@ts-ignore
+  createRouteWithMeta(ROUTES.AGENT_CHAT, <AgentChatPage />),
   // createRouteWithMeta(ROUTES.CONVERSATIONS, <ConversationsPage />, {
   //   children: [
   //     createRouteWithMeta("", <ConversationPlaceholder />, { index: true }),
